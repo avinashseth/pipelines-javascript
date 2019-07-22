@@ -1,5 +1,6 @@
 # Build NodeJS Express app using Azure Pipelines
 - task: Kubernetes@1
+  displayName: 'running Kubernetes'
   inputs:
     connectionType: 'Azure Resource Manager'
     azureSubscriptionEndpoint: 'Pay-As-You-Go(cde69121-6dcf-4113-bc99-22caa7646d9f)'
