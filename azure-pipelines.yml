@@ -44,5 +44,4 @@ steps:
     azureSubscription: 'Pay-As-You-Go(cde69121-6dcf-4113-bc99-22caa7646d9f)'
     appType: 'webAppLinux'
     WebAppName: 'jkkhjkhj'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    RuntimeStack: 'NODE|10.14'
+    packageForLinux: '$(System.DefaultWorkingDirectory)'
