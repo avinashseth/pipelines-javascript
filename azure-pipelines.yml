@@ -38,13 +38,11 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- task: Kubernetes@1
-  displayName: 'running Kubernetes'
+- task: AzureRmWebAppDeployment@4
   inputs:
-    connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'Pay-As-You-Go(cde69121-6dcf-4113-bc99-22caa7646d9f)'
-    azureResourceGroup: 'az_aks'
-    kubernetesCluster: 'aks'
-    command: 
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-As-You-Go(cde69121-6dcf-4113-bc99-22caa7646d9f)'
+    appType: 'webAppLinux'
+    WebAppName: 'jkkhjkhj'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'NODE|10.14'
